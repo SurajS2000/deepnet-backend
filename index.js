@@ -34,7 +34,7 @@ app.get("/api/items/:menuId", async (req, res) => {
     if (!menu) {
       return res.status(404).send("Menu not found");
     }
-    res.json(menu.items);
+    res.json(menu);
   } catch (error) {
     res.status(500).send("Error fetching menu items");
   }
