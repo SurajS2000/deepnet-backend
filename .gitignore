@@ -1,18 +1,3 @@
 # Node.js and general project files to ignore
 node_modules/
 .env
-.DS_Store
-
-# Log files
-*.log
-
-# Build output
-dist/
-build/
-
-# IDE and editor settings
-.vscode/
-.idea/
-
-# Operating system files
-Thumbs.db
