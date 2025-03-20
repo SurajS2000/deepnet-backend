@@ -2,20 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Menu = require("./models/menu.model");
 require("dotenv").config();
-const mongoURI = process.env.MONGO_URI;
 
 const app = express();
 
 app.use(express.json());
 
-mongoose
-  .connect(mongoURI)
-  .then(() => {
-    console.log("connected database");
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+const connectDB = require("./connectMongo");
+
+connectDB();
 
 app.get("/", (req, res) => {
   console.log("server running");
